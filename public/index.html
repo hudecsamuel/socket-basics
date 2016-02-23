@@ -4,21 +4,50 @@
     <meta charset="utf-8">
     <title>Socket.io Basics</title>
 
+    <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/css/styles.css" media="screen" title="no title" charset="utf-8">
 
   </head>
   <body>
-    <h1>Join chat</h1>
-    <form class="" action="/chat.html" method="get">
+<div class="vertical-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 well">
+        <h1>Join chat</h1>
 
-      <label for="name">Display name</label>
-      <input type="text" name="name" value="">
+        <form class="" action="/chat.html" method="get">
 
-      <label for="room">Room name</label>
-      <input type="text" name="room" value="">
+          <div class="form-group">
+            <label for="name">Display name</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-user"></i>
+              </span>
+              <input type="text" name="name" value="" class="form-control">
+            </div>
+          </div>
 
-      <input type="submit" name="submit" value="Join chat">
+          <div class="form-group">
+            <label for="room">Room name</label>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-comment"></i>
+              </span>
+              <input type="text" name="room" value="" class="form-control">
+            </div>
+          </div>
 
-    </form>
+          <div class="form-group">
+            <input type="submit" name="submit" value="Join chat" class="btn btn-primary btn-block">
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+</div>
 
   </body>
 </html>
