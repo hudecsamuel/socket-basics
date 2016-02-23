@@ -18,7 +18,7 @@ function sendCurrentUsers(socket) {
   if(typeof info === 'undefined') {
     return;
   }
-  
+
   console.log(info);
 
   Object.keys(clientInfo).forEach(function(socketId) {
@@ -49,6 +49,7 @@ io.on('connection', function(socket){
         text: userData.name + ' has left the room.',
         timestamp: moment().valueOf()
       });
+      delete clientInfo[socket.id];
     }
   });
 

@@ -15,14 +15,15 @@ socket.on('connect', function(){
 
 socket.on('message', function(message) {
   var $messages = jQuery('.messages');
+  var $message = jQuery('<li class="list-group-item"></li>');
   console.log('New message:');
   console.log(message.text);
 
 console.log(message);
 
-  $messages.append('<p><strong>' + message.name + ' ' + moment.utc(message.timestamp).local().format("h:m a") + "</strong> </p>")
-  $messages.append("<p>" + message.text  + " </p>");
-
+  $message.append('<p><strong>' + message.name + ' ' + moment.utc(message.timestamp).local().format("h:m a") + "</strong> </p>")
+  $message.append("<p>" + message.text  + " </p>");
+  $messages.append($message);
 });
 
 socket.emit('message', {
