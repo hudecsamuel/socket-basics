@@ -11,6 +11,10 @@ var timestampMoment = moment.utc(timestamp);
 
 console.log(timestampMoment.local().format("h:m a"));
 
+console.log('bla');
+var expire = moment.unix(1453823957).utc();
+console.log(expire.local().format("h:m"));
+
 
 // now.subtract(1, 'year');
 // console.log(now.format());
